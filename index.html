@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Мопсы - Готический Стиль</title>
+  <style>
+    body {
+      background-color: #0b0b0b;
+      color: #f5f5f5;
+      font-family: 'Courier New', monospace;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      background-color: #111;
+      padding: 20px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      border-bottom: 2px solid #444;
+      width: 100%;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    .video-side {
+      width: 20%;
+      padding: 10px;
+    }
+
+    .gallery {
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .pug {
+      background-color: #1c1c1c;
+      padding: 10px;
+      border: 1px solid #333;
+      border-radius: 10px;
+      text-align: center;
+      width: 100%;
+    }
+
+    .pug img {
+      max-width: 100%;
+      border-radius: 10px;
+    }
+
+    .like-btn {
+      margin-top: 10px;
+      padding: 5px 10px;
+      background-color: #333;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    создатель этой бомбы БОСС pipiskin2015 тру
+  </header>
+  <div class="container">
+    <div class="video-side">
+      <video src="video_2025-05-08_00-34-04.mp4" controls width="100%"></video>
+    </div>
+
+    <div class="gallery">
+      <div class="pug">
+        <img src="https://place-puppy.com/400x300" alt="Смешной мопс">
+        <button class="like-btn" onclick="like(this)">Лайк ❤️ (<span>0</span>)</button>
+      </div>
+      <div class="pug">
+        <img src="https://place-puppy.com/401x300" alt="Смешной мопс">
+        <button class="like-btn" onclick="like(this)">Лайк ❤️ (<span>0</span>)</button>
+      </div>
+    </div>
+
+    <div class="video-side">
+      <!-- Можем добавить второе видео позже -->
+    </div>
+  </div>
+
+  <script>
+    function like(button) {
+      const span = button.querySelector('span');
+      span.textContent = parseInt(span.textContent) + 1;
+    }
+  </script>
+</body>
+</html>
